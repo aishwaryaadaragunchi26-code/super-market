@@ -15,25 +15,23 @@ price2 = float(sys.argv[10])
 
 subtotal1 = q1 * price1
 subtotal2 = q2 * price2
-
 total = subtotal1 + subtotal2
 
-print("\n--- Grocery Shop Bill ---")
-print("Customer Name:", customer)
+print("\n--------- SHOPPING BILL ---------")
+print("Cashier/Customer Name:", customer)
 print("Phone Number:", phone)
 print("Bill Number:", bill_no)
 print("Bill Date:", bill_date)
 
-print(p1, ":", subtotal1)
-print(p2, ":", subtotal2)
+print("\nProduct 1:", p1)
+print("Quantity:", q1)
+print("Price:", price1)
+print("Subtotal 1:", subtotal1)
 
-print("Total Amount:", total)
+print("\nProduct 2:", p2)
+print("Quantity:", q2)
+print("Price:", price2)
+print("Subtotal 2:", subtotal2)
 
-with open("grocery.txt", "a") as f:
-    f.write(
-        f"{customer}, {phone}, {bill_no}, {bill_date}, "
-        f"{p1}, {q1}, {price1}, "
-        f"{p2}, {q2}, {price2}, {total}\n"
-    )
-
-print("Bill saved successfully!")
+print("\nTotal Amount:", total)
+print("--------------------------------")
